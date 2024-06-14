@@ -11,10 +11,9 @@ import { Button } from '@/components/ui/button/Button'
 import Field from '@/components/ui/field/Field'
 import { IAuthFormState } from './auth.types'
 
-interface IAuth {
+interface IAuth {  
   type?: 'Login' | 'Register'
 }
-
 export function Auth({type}: IAuth) {
 
   const [isLoading, setIsLoading] = useState(false)
@@ -57,7 +56,7 @@ export function Auth({type}: IAuth) {
               required: true,
             })}
             placeholder='Enter username' 
-            type='username' 
+            type='name'
             Icon={CircleUserRound}
           />
         }

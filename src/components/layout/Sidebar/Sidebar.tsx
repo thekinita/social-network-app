@@ -9,7 +9,7 @@ import cn from 'clsx'
 import styles from "./Sidebar.module.scss"
 import { MENU } from "./sidebar.data"
 
-const isLoggedIn = false
+const isLoggedIn = true
 
 export function Sidebar() { 
   
