@@ -4,6 +4,25 @@
 
 html, body {
   color: #EFEFF3;
-  background: linear-gradient(to top right, #0F0104, #1F0A14, #0F0104);
+  background: linear-gradient(to top right, rgb(15, 1, 4), rgb(10, 10, 31), rgb(15, 1, 4));
   height: 100%;
+}
+
+input:-webkit-autofill {
+  transition-delay: 9999s;
+  transition-property: background-color;
+}
+
+.animation-slide-fade {
+  animation: slideFade .4s;
+}
+
+@keyframes slideFade {
+  from{
+    transform: translateY(-22px);
+    opacity: .4s;
+  }
+  to{
+    transform: translateY(0);
+  }
 }

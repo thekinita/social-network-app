@@ -17,7 +17,6 @@ export default function AuthProvider({ children }: PropsWithChildren<unknown>) {
 	useEffect(() => {
 		if (pathname !== '/login' && pathname !== '/register') {
 			const isLoggedIn = !!window.localStorage.getItem('token')
-			console.log(isLoggedIn)			
 			if (!isLoggedIn) return router.push('/login')
 		}
 	}, [pathname, isLoggedIn])

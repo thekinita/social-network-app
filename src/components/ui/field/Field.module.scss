@@ -1,5 +1,5 @@
 .field{
-  @apply flex items-center mb-10 border border-border rounded-xl p-2 transition-colors duration-300 ease-linear relative;
+  @apply flex items-center border mb-6 border-border rounded-xl p-2 transition-colors duration-300 ease-linear relative;
 
   > input {
     @apply border-none outline-none bg-transparent placeholder:text-[#585654] transition-colors duration-300 ease-linear;

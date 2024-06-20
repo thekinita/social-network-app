@@ -1,5 +1,5 @@
 import { Chat } from '@/components/screens/chats/Chat'
-import { ChatList } from '@/components/screens/chats/ChatList'
+import { ChatList } from '@/components/screens/chats/list/ChatList'
 import { CurrentUser } from '@/components/screens/chats/CurrentUser'
 
 export default function ChatsPage() {
