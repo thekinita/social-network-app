@@ -1,3 +1,5 @@
+<h1 align="center">Social Network App</h1>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -20,17 +22,55 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Stack
 
-To learn more about Next.js, take a look at the following resources:
+- React
+- TypeScript
+- Next.js
+- Socket io
+- Next-auth
+- Tailwind
+- Strapi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="center">
+  <img src="./readme_assets/login.png" width="80%" style="margin: 10px">
+  <img src="./readme_assets/chats.png" width="80%" style="margin: 10px">
+  <img src="./readme_assets/chat.png" width="80%" style="margin: 10px">
+</p>
 
-## Deploy on Vercel
+## Getting started with Strapi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a neighboring folder and run the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+# create back-end project
+npx create-strapi-app@latest my-project
+
+# add plugins
+yarn add strapi-plugin-populate-deep
+yarn add strapi-plugin-transformer
+```
+
+Go to /config/plugins.ts and copy-paste the next code:
+
+```ts
+export default ({ env }) => ({
+  'transformer': {
+    enabled: true,
+    config: {
+      responseTransforms: {
+        removeAttributesKey: true,
+        removeDataKey: true,
+      }
+    }
+  },
+	"strapi-plugin-populate-deep": {
+		config: {
+			defaultDepth: 5,
+		},
+	},
+});
+
+```
