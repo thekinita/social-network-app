@@ -19,9 +19,7 @@ export function Sidebar() {
     <aside className={styles.sidebar}>
       {isLoggedIn.isLoggedIn ? 
       <>
-        <Link href='/'>
-          <Image src='/logo.svg' priority alt="" width={40} height={40}/>
-        </Link>
+        <Image src='/logo.svg' priority alt="" width={40} height={40}/>
         <div>
           {MENU.map(item => (
             <Link 

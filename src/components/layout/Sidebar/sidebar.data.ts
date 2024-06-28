@@ -6,7 +6,7 @@ export const MENU = [
     icon: UsersRound
   },
   {
-    url: '/chats',
+    url: '/',
     icon: MessageCircle
   },
   {

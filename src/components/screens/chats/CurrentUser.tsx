@@ -15,8 +15,6 @@ export function CurrentUser() {
         { push } = useRouter(),
         { data, isLoading } = useProfile()
 
-  console.log(data)  
-
   return (
     <div className='p-layout flex items-center justify-between'>
       <div className="flex items-center">
