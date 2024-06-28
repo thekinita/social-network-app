@@ -48,8 +48,8 @@ export function Auth({type}: IAuth) {
 
   return (
     <div className='flex w-screen h-full'>
-      <form onSubmit={handleSubmit(onSubmit)} className='m-auto block w-96 p-layout'>
-        <h1 className='text-center m-10 text-3xl font-bold'>{type}</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className='m-auto block w-96 p-layout *:my-6'>
+        <h1 className='text-center text-3xl font-bold'>{type}</h1>
         {type === 'Register' && 
           <Field 
             {...register('username', {

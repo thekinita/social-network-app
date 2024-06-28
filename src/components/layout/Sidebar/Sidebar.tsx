@@ -15,8 +15,6 @@ export function Sidebar() {
   const pathname = usePathname(),
         isLoggedIn = useAuth()
 
-  console.log(isLoggedIn)  
-
   return (
     <aside className={styles.sidebar}>
       {isLoggedIn.isLoggedIn ? 
